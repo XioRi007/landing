@@ -37,3 +37,18 @@ links.forEach(link => {
         }
     });
 });
+
+const burgerBnt = document.querySelector('.burger-menu-btn');
+const nav = document.querySelector('.header_nav');
+const icon = document.querySelector('.burger-menu-icon');
+burgerBnt.addEventListener('click', (event) => {
+    nav.classList.toggle('header_nav-active');
+    icon.classList.toggle('icon-active');
+});
+
+nav.addEventListener('click', (event) => {
+    if (nav.classList.contains('header_nav-active') && event.target.tagName == "A") {
+        nav.classList.remove('header_nav-active');
+        icon.classList.remove('icon-active');
+    }
+});

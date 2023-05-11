@@ -13,7 +13,10 @@
     <a href="/">
         <img src="./img/logo.png" alt="Logo">
     </a>
-    <ul class="nav d-flex text-grey">
+    <button class="burger-menu-btn">
+        <span class="burger-menu-icon"></span>
+    </button>
+    <ul class="header_nav nav d-flex text-white">
         <li class="nav_link">
             <a href="#features">Features</a>
         </li>
@@ -27,7 +30,7 @@
             <a href="#">Contact</a>
         </li>
         <li class="nav_link">
-            <a href="#" class="btn btn-outlined-blue text-blue">Login</a>
+            <a href="#" class="btn btn-small btn-outlined-blue text-blue">Login</a>
         </li>
     </ul>
 
@@ -43,7 +46,7 @@
     <img src="./img/dashboard.png" alt="dashboard" class="dashboard_img">
 </section>
 
-<section class="container features text-center" id="features">
+<section class="container features text-center background-white" id="features">
     <ul class="features_list d-flex">
         <li class="feature_item d-flex direction-column">
             <img class="feature_icon" src="./img/feature1.png" alt="feature 1">
@@ -52,6 +55,7 @@
                 nulla, fringilla vel ex ac, porttitor facilisis erat</p>
             <a class="btn btn-outlined-black bold" href="#features">See more</a>
         </li>
+        <hr class="line feature_line feature_line_first">
         <li class="feature_item d-flex direction-column">
             <img class="feature_icon" src="./img/feature2.png" alt="feature 1">
             <h6 class="feature_title font-24 bold text-dark">Analytics & Insights</h6>
@@ -59,6 +63,7 @@
                 nulla, fringilla vel ex ac, porttitor facilisis erat</p>
             <a class="btn btn-outlined-black bold" href="#features">See more</a>
         </li>
+        <hr class="line feature_line feature_line_second">
         <li class="feature_item d-flex direction-column">
             <img class="feature_icon" src="./img/feature3.png" alt="feature 1">
             <h6 class="feature_title font-24 bold text-dark">Organize Your Deadlines</h6>
@@ -159,7 +164,7 @@
     </div>
 </section>
 
-<section class="container pricing text-center" id="pricing">
+<section class="container pricing text-center background-white" id="pricing">
     <h2 class="title text-dark">Check our pricing!</h2>
     <div class="pricing_items d-flex">
         <div class="pricing_item d-flex direction-column">
