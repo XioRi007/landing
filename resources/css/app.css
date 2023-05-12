@@ -346,13 +346,17 @@ a {
 }
 
 .drag-n-drop_workflow {
-    max-width: 100%;
-    margin-left: auto;
+    max-width: 105%;
+    margin-left: -5%;
     margin-right: auto;
 }
 
 .drag-n-drop_carousel {
     transition: transform 0.5s ease-in-out;
+}
+
+.drag-n-drop_workflow_container {
+    overflow: hidden;
 }
 
 .carousel_item {
@@ -588,6 +592,10 @@ a {
         padding-right: 0;
     }
 
+    .template_content {
+        padding: 0 50px;
+    }
+
     .template_note_line {
         width: 40vw;
     }
@@ -597,15 +605,19 @@ a {
     }
 
     .template_note_line_second:before {
-        right: 42vw;
+        right: 40vw;
     }
 
     .template_note_line_second {
-        margin-left: -23vw;
+        margin-left: -21vw;
     }
 
     .template_img {
         width: 700px;
+    }
+
+    .template_text {
+        padding: 0 100px;
     }
 
     .template_note_first {
@@ -614,6 +626,7 @@ a {
 
     .template_note_second {
         top: 175px;
+        right: 50px;
     }
 
     .feature_line {
@@ -626,6 +639,44 @@ a {
 
     .feature_line_second {
         left: 61%;
+    }
+
+    .browser_img {
+        height: 650px;
+        padding-top: 65px;
+    }
+
+    .browser_text {
+        margin-top: 20px;
+        padding-right: 100px;
+    }
+
+    .browser_checklist {
+        margin-top: 40px;
+    }
+
+    .browser_padding {
+        padding-top: 40px;
+    }
+
+    .checklist_item {
+        margin-bottom: 30px;
+    }
+
+    .drag-n-drop {
+        padding: 90px 0;
+    }
+
+    .carousel_content {
+        padding: 0 100px 0 100px;
+    }
+
+    .drag-n-drop_text {
+        margin-top: 30px;
+    }
+
+    .pricing_item {
+        margin: 100px 30px;
     }
 }
 
@@ -662,8 +713,18 @@ a {
         margin-top: 0;
     }
 
+    .drag-n-drop_workflow {
+        margin: 0 auto;
+        width: 100%;
+    }
+
     .template_img {
         width: 700px;
+    }
+
+    .template_note_line_first:after,
+    .template_note_line_second:before {
+        top: 15%;
     }
 
     .header {
@@ -675,7 +736,7 @@ a {
     }
 
     .template_note_first {
-        top: 20px;
+        top: 10px;
     }
 
     .template_note_line {
@@ -688,7 +749,7 @@ a {
     }
 
     .template_note_second {
-        top: 160px;
+        top: 190px;
     }
 
     .template_note_line_second:before {
