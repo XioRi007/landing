@@ -160,7 +160,7 @@ a {
 
 .burger-menu-icon {
     display: block;
-    width: 25px;
+    width: 50px;
     height: 3px;
     margin: 5px;
     background-color: #fff;
@@ -306,11 +306,11 @@ a {
 }
 
 .browser_img {
-    padding-top: 70px;
+    padding-top: 50px;
     max-width: 100%;
     margin-right: 0;
     margin-left: auto;
-    height: 800px;
+    height: 37vw;
 }
 
 /************************************************[DRAG-N-DROP]***********************************************/
@@ -524,6 +524,7 @@ a {
 /************************************************[MEDIA]***********************************************/
 
 @media (max-width: 2300px) {
+
     .template_note_line_first:after {
         right: -22vw;
     }
@@ -562,7 +563,6 @@ a {
     }
 
     .browser_img {
-        height: 650px;
         padding-top: 65px;
     }
 
@@ -597,10 +597,21 @@ a {
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1550px) {
     .browser_img {
-        height: 600px;
         padding-top: 65px;
+    }
+
+    .browser_checklist {
+        margin-top: 30px;
+    }
+
+    .checklist_item {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 52px;
     }
 }
 
@@ -667,9 +678,6 @@ a {
         left: 61%;
     }
 
-    .checklist_item {
-        margin-bottom: 30px;
-    }
 
     .drag-n-drop {
         padding: 90px 0;
@@ -688,9 +696,6 @@ a {
     }
 }
 @media (max-width: 1350px) {
-    .browser_img {
-        height: 500px;
-    }
 
     .browser_text {
         padding-right: 50px;
@@ -720,7 +725,7 @@ a {
     }
 
     .browser_img {
-        height: 700px;
+        height: 65vw;
     }
 
     .drag-n-drop {
@@ -854,10 +859,16 @@ a {
         z-index: 50;
         transition: all 0.5s ease-out;
         background-color: #0e1a35;
+        font-size: 36px;
+    }
+
+    .header_nav .nav_link {
+        margin: 30px;
     }
 
     .nav_link {
-        margin: 10px;
+        font-size: 24px;
+        margin-left: 45px;
     }
 
     .burger-menu-btn {
@@ -866,11 +877,11 @@ a {
     }
 
     .burger-menu-icon::before {
-        transform: translateY(-8px) rotate(-0deg);
+        transform: translateY(-15px) rotate(-0deg);
     }
 
     .burger-menu-icon::after {
-        transform: translateY(6px) rotate(0deg);
+        transform: translateY(15px) rotate(0deg);
     }
 
     .icon-active {
@@ -882,7 +893,7 @@ a {
     }
 
     .icon-active::after {
-        transform: translateY(6px) rotate(45deg) translateX(-8px);
+        transform: translateY(13px) rotate(45deg) translateX(-17px);
     }
 
     .header_nav-active {
