@@ -1,0 +1,83 @@
+@import "mixins";
+
+.drag-n-drop {
+  height: 750px;
+  padding: 90px 70px;
+
+  @include for-1440max {
+    padding: 90px 0;
+  }
+  @include for-1200max {
+    flex-direction: column;
+    height: 1100px;
+    padding: 0;
+  }
+}
+
+.drag-n-drop_content {
+  margin-top: 110px;
+  overflow: hidden;
+
+  @include for-1200max {
+    margin-top: 0;
+  }
+}
+
+.drag-n-drop_text {
+  margin-top: 45px;
+  word-wrap: break-word;
+  @include for-1440max {
+    margin-top: 30px;
+  }
+}
+
+.drag-n-drop_controls {
+  margin-top: 60px;
+  margin-left: 145px;
+}
+
+.drag-n-drop_control {
+  margin-right: 20px;
+  padding: 0;
+  opacity: 60%;
+}
+
+.drag-n-drop_control:hover {
+  opacity: 100%;
+}
+
+.drag-n-drop_workflow {
+  max-width: 105%;
+  margin-left: -5%;
+  margin-right: auto;
+
+  @include for-1200max {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.drag-n-drop_carousel {
+  transition: transform 0.5s ease-in-out;
+}
+
+.drag-n-drop_workflow_container {
+  overflow: hidden;
+}
+
+.carousel_item {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel_content {
+  padding-left: 145px;
+  padding-right: 250px;
+
+  @include for-1800max {
+    padding-right: 100px;
+  }
+  @include for-1440max {
+    padding: 0 100px 0 100px;
+  }
+}

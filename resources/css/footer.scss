@@ -1,0 +1,14 @@
+@import "mixins";
+
+.footer {
+  background-color: $color_dark_blue;
+  height: 150px;
+
+  @include for-1200max {
+    height: 100px;
+  }
+}
+
+.socials {
+  margin-left: 15px;
+}

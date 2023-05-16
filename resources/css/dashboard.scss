@@ -1,0 +1,20 @@
+@import "mixins";
+
+.dashboard {
+  position: absolute;
+  top: 530px;
+  width: 1024px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include for-1024max {
+    top: 535px;
+    width: 100%;
+  }
+}
+
+.dashboard_img {
+  @include for-1024max {
+    width: 100%;
+  }
+}

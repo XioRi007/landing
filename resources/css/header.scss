@@ -1,0 +1,118 @@
+@import "mixins";
+
+.header {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 50px 160px;
+
+  @include for-1200max {
+    padding: 50px;
+  }
+  @include for-1024max {
+    padding: 20px;
+  }
+}
+
+.nav_link {
+  margin-left: 45px;
+  opacity: 80%;
+  transition: color 0.3s ease;
+
+  @include for-1024max {
+    font-size: $font_24;
+    margin-left: 45px;
+  }
+}
+
+.nav_link:hover {
+  opacity: 100%;
+}
+
+.burger-menu-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include for-1024max {
+    display: block;
+    z-index: 100;
+  }
+}
+
+.burger-menu-icon {
+  display: block;
+  width: 50px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.burger-menu-icon::before,
+.burger-menu-icon::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+.burger-menu-icon::before {
+  transform-origin: left;
+
+  @include for-1024max {
+    transform: translateY(-15px) rotate(-0deg);
+  }
+}
+
+.burger-menu-icon::after {
+  transform-origin: right;
+  @include for-1024max {
+    transform: translateY(15px) rotate(0deg);
+  }
+}
+
+.header_nav {
+  transition: all 1s ease-out;
+
+  @include for-1024max {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 50;
+    transition: all 0.5s ease-out;
+    background-color: $color_dark_blue;
+    font-size: $font_36;
+  }
+}
+
+@include for-1024max {
+  .header_nav .nav_link {
+    margin: 30px;
+  }
+
+  .icon-active {
+    background-color: inherit;
+  }
+
+  .icon-active::before {
+    transform: translateY(6px) rotate(-45deg) translateX(3px);
+  }
+
+  .icon-active::after {
+    transform: translateY(13px) rotate(45deg) translateX(-17px);
+  }
+
+  .header_nav-active {
+    max-height: 550px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $color_blue_active;
+  }
+}
