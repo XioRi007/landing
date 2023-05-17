@@ -1,0 +1,96 @@
+.pricing {
+  padding-top: 150px;
+  padding-bottom: 105px;
+
+  &_items {
+    @include for_1024max {
+      flex-direction: column;
+    }
+  }
+
+  &_item {
+    width: 33%;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.30);
+    margin: 100px 55px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+
+    @include for_1440max {
+      margin: 100px 30px;
+    }
+
+    @include for_1200max {
+      margin: 50px 15px;
+    }
+
+    @include for_1024max {
+      width: 50%;
+      margin: 50px auto;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &_title {
+      margin-top: 50px;
+    }
+
+    &_price {
+      font-size: 72px;
+      margin: 55px 0;
+    }
+
+    &_feature {
+      height: 25px;
+      margin-bottom: 30px;
+    }
+
+    &_features {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  &_text {
+    width: 65%;
+    margin: 0 auto 65px;
+
+    @include for_1200max {
+      width: 80%;
+    }
+  }
+
+  &_btn {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 225px;
+      height: 1px;
+      background-color: $color_grey;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: 230px;
+    }
+
+    &::after {
+      right: 230px;
+    }
+  }
+
+}
+
+.dollar {
+  font-size: 40px;
+}

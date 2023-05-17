@@ -1,0 +1,129 @@
+.header {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  padding: 50px 160px;
+
+  @include for_1200max {
+    padding: 50px;
+  }
+  @include for_1024max {
+    padding: 20px;
+  }
+
+  &_nav {
+    transition: all 1s ease-out;
+
+    @include for_1024max {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      z-index: 50;
+      transition: all 0.5s ease-out;
+      background-color: $color_dark_blue;
+      font-size: $font_36;
+    }
+
+    & .nav_link {
+      @include for_1024max {
+        margin: 30px;
+      }
+    }
+
+    &_active {
+      @include for_1024max {
+        max-height: 550px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid $color_blue_active;
+      }
+    }
+  }
+}
+
+.nav_link {
+  margin-left: 45px;
+  opacity: 80%;
+  transition: color 0.3s ease;
+
+  @include for_1024max {
+    font-size: $font_24;
+    margin-left: 45px;
+  }
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.burger_menu {
+
+  &_btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include for_1024max {
+      display: block;
+      z-index: 100;
+    }
+  }
+
+  &_icon {
+    display: block;
+    width: 50px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+    transition: transform 0.3s ease;
+
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      transition: transform 0.3s ease;
+    }
+
+    &::before {
+      transform-origin: left;
+
+      @include for_1024max {
+        transform: translateY(-15px) rotate(-0deg);
+      }
+    }
+
+    &::after {
+      transform-origin: right;
+      @include for_1024max {
+        transform: translateY(15px) rotate(0deg);
+      }
+    }
+  }
+
+}
+
+.icon_active {
+  @include for_1024max {
+    background-color: inherit;
+  }
+
+  &::before {
+    @include for_1024max {
+      transform: translateY(6px) rotate(-45deg) translateX(3px);
+    }
+  }
+
+  &::after {
+    @include for_1024max {
+      transform: translateY(13px) rotate(45deg) translateX(-17px);
+    }
+  }
+}

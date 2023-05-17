@@ -1,0 +1,145 @@
+
+.template {
+  padding-top: 100px;
+  background: linear-gradient(to bottom, $color_light_grey 0%, white 100%);
+
+  &_img {
+    width: 100%;
+    @include for_1440max {
+      width: 700px;
+    }
+  }
+
+  &_title {
+    margin-bottom: 65px;
+  }
+
+  &_text {
+    @include for_1440max {
+      padding: 0 100px;
+    }
+  }
+
+  &_content {
+    margin-top: 85px;
+    position: relative;
+    @include for_1440max {
+      padding: 0 50px;
+    }
+  }
+
+  &_note {
+    position: absolute;
+    width: 260px;
+
+    &_text {
+      margin-bottom: 20px;
+      @include for_1200max {
+        margin-bottom: 5px;
+      }
+    }
+
+    &_first {
+      top: 95px;
+      @include for_1440max {
+        top: 20px;
+      }
+      @include for_1200max {
+        top: 10px;
+      }
+    }
+
+    &_second {
+      top: 360px;
+      right: 0;
+      @include for_1440max {
+        top: 175px;
+        right: 50px;
+      }
+      @include for_1200max {
+        top: 190px;
+      }
+    }
+
+    &_line {
+      width: 34vw;
+      border: 1px solid $color_blue;
+      margin-bottom: 30px;
+
+      @include for_1800max {
+        width: 36vw;
+      }
+      @include for_1440max {
+        width: 40vw;
+      }
+      @include for_1200max {
+        width: 47vw;
+        margin-bottom: 5px;
+      }
+
+      &_first::after,
+      &_second::before {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        border: 1px solid $color_blue;
+        position: absolute;
+        top: 20%;
+        width: 30px;
+        height: 30px;
+        background-color: $color_blue;
+        box-shadow: 0 0 0 10px rgba(153, 181, 255, 0.8);
+        @include for_1200max {
+          top: 15%;
+        }
+      }
+
+      &_first::after {
+        right: -21vw;
+        @include for_2300max {
+          right: -22vw;
+        }
+        @include for_1440max {
+          right: -24vw;
+        }
+      }
+
+
+      &_second {
+        margin-left: -20vw;
+        @include for_2300max {
+          margin-left: -23vw;
+        }
+        @include for_1900max {
+          margin-left: -20vw;
+        }
+        @include for_1440max {
+          margin-left: -21vw;
+        }
+        @include for_1024max {
+          margin-left: -21vw;
+        }
+
+        &::before {
+          right: 33vw;
+          @include for_2300max {
+            right: 33vw;
+          }
+          @include for_1900max {
+            right: 32vw;
+          }
+          @include for_1800max {
+            right: 35vw;
+          }
+          @include for_1440max {
+            right: 40vw;
+          }
+          @include for_1200max {
+            right: 47vw;
+          }
+        }
+      }
+    }
+  }
+}
+

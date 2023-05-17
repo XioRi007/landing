@@ -1,0 +1,59 @@
+.title {
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: 250;
+
+  @include for_1550max {
+    font-size: 52px;
+  }
+}
+
+.subtitle {
+  font-size: $font_36;
+  line-height: 50px;
+  margin-bottom: 85px;
+}
+
+.font_24 {
+  font-size: $font_24;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.text {
+
+  &_grey {
+    color: $color_grey;
+  }
+
+  &_dark {
+    color: $color_dark_blue;
+  }
+
+  &_blue {
+    color: $color_blue;
+  }
+
+  &_white {
+    color: white;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+
+  &_left {
+    text-align: left;
+  }
+
+  &_uppercase {
+    text-transform: uppercase;
+  }
+
+}

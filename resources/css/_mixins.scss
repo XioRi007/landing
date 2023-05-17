@@ -1,46 +1,46 @@
-@mixin for-1024max {
+@mixin for_1024max {
   @media (max-width: 1024px) {
     @content;
   }
 }
 
-@mixin for-1200max {
+@mixin for_1200max {
   @media (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin for-1350max {
+@mixin for_1350max {
   @media (max-width: 1350px) {
     @content;
   }
 }
 
-@mixin for-1440max {
+@mixin for_1440max {
   @media (max-width: 1440px) {
     @content;
   }
 }
 
-@mixin for-1550max {
+@mixin for_1550max {
   @media (max-width: 1550px) {
     @content;
   }
 }
 
-@mixin for-1800max {
+@mixin for_1800max {
   @media (max-width: 1800px) {
     @content;
   }
 }
 
-@mixin for-1900max {
+@mixin for_1900max {
   @media (max-width: 1900px) {
     @content;
   }
 }
 
-@mixin for-2300max {
+@mixin for_2300max {
   @media (max-width: 2300px) {
     @content;
   }
